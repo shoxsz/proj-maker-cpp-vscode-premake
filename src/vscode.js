@@ -68,7 +68,7 @@ const createReleaseTask = function(forWorkspace, configs){
 const createRunReleaseTask = function(configs){
   return {
     "type": "shell",
-    "label": "Run Release",
+    "label": `Run Release ${configs.projectName}`,
     "command": `\${workspaceFolder}/bin/Release/${configs.projectName}.exe`,
     "problemMatcher": ["$msCompile"],
     "args": [],
@@ -118,7 +118,7 @@ const createTasksScript = function(configs){
 
 const createLaunchSrc = function(configs){
   return {
-    "name": "Run Debug",
+    "name": `Run Debug ${configs.projectName}`,
     "type": "cppvsdbg",
     "request": "launch",
     "program": `\${workspaceFolder}/bin/Debug/${configs.projectName}.exe`,
