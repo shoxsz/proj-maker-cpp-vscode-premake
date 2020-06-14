@@ -22,7 +22,7 @@ Jut download it and run `npm start`, the tool will prompt you to enter the proje
 
 
 ## Launch Configurations
-It creates one launch configuration name `Run Debug <ProjectName>` for each project that generates a .exe file(ConsoleApp/WindowedApp), `stopAtEntry` will be *true*
+It creates one launch configuration named `Run Debug <ProjectName>` for each project that generates a .exe file(ConsoleApp/WindowedApp), `stopAtEntry` will be *true*
 
 # Contribute
 
