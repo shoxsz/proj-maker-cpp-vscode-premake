@@ -4,7 +4,7 @@
   "description": "Create a C++ project for vscode and premake",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

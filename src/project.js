@@ -34,6 +34,10 @@ class Project{
     this.folders.push(folderName);
   }
 
+  readTemplate(templateFile){
+    return fs.readFileSync(path.join("templates", templateFile), "utf-8");
+  }
+
   createFile(filePath, content){
     let fullPath = "";
     if(typeof filePath === "string"){

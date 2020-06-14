@@ -40,8 +40,8 @@ const createProject = function(projectTemplate, configs, project){
 }
 
 const createPremakeScript = function(configs){
-  const workspaceTemplate = fs.readFileSync("templates/premake_workspace.template", { encoding: "utf-8" });
-  const projectTemplate = fs.readFileSync("templates/premake_project.template", { encoding: "utf-8" });
+  const workspaceTemplate = configs.readTemplate("premake_workspace.template", { encoding: "utf-8" });
+  const projectTemplate = configs.readTemplate("premake_project.template", { encoding: "utf-8" });
 
   const workspace = createWorkspace(workspaceTemplate, configs);
 
