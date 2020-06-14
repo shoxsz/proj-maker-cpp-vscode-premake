@@ -1,0 +1,17 @@
+{
+  "name": "cpp-proj-setup",
+  "version": "1.0.0",
+  "description": "Create a C++ project for vscode and premake",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "C++",
+    "vscode",
+    "premake"
+  ],
+  "author": "Shoxsz",
+  "license": "ISC"
+}

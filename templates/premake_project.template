@@ -1,0 +1,8 @@
+project "{project_name}"
+	kind "{project_kind}"
+	language "{project_language}"
+	architecture "{project_arch}"
+	location "build/{project_name}"
+	targetdir "bin/%{cfg.buildcfg}"
+
+	files { {project_files} }
