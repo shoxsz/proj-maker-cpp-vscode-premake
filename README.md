@@ -6,7 +6,7 @@ This is a simple tool for creating C++ projects with **vscode** and **premake**,
 
 ## How to use
 
-Jut download it and run `npm start`, the tool will prompt you to enter the project location, workspace name, project name, etc. the tool will create the project location you entered, add a `.vscode` folder and populate it with a `tasks.json` and a `launch.json` files, it will also add a `premake5.lua` file with the projects configurations and add a `.bat` file with instructions to open vscode within the **Developer Command Prompt for Vs 2019**.
+Download the source code or clone this repository, I recommend you to install the program with `npm install -g .`, this will make it available anywhere in your computer from the command line, it'll attend by the name `cppproj`. The second option is to run `npm start`. After running the tool, you will be prompted to enter the project location, workspace name, project name, etc. the tool will create the project location you entered, add a `.vscode` folder and populate it with a `tasks.json` and a `launch.json` files, it will also add a `premake5.lua` file with the projects configurations and add a `.bat` file with instructions to open vscode within the **Developer Command Prompt for Vs 2019**.
 
 
 ## Tasks list
