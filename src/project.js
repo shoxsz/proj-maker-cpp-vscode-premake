@@ -35,7 +35,7 @@ class Project{
   }
 
   readTemplate(templateFile){
-    return fs.readFileSync(path.join("templates", templateFile), "utf-8");
+    return fs.readFileSync(path.join(__dirname, "..", "templates", templateFile), "utf-8");
   }
 
   createFile(filePath, content){
