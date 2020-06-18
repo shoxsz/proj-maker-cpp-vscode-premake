@@ -13,5 +13,8 @@
     "premake"
   ],
   "author": "Shoxsz",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "cppproj": "./src/main.js"
+  }
 }

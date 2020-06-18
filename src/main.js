@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const project = require("./project");
 const input = require("./input");
 const readline = require("readline");
