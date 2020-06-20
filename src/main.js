@@ -11,4 +11,7 @@ const inputStreams = readline.createInterface({
 
 const inputReader = input.InputReader(inputStreams);
 
-inputReader().then(projData => project.createProject(projData)).finally(() => inputStreams.close());
+inputReader()
+.then(projData => project.createProject(projData))
+.catch(error => console.log("Project creation failed:", error.message))
+.finally(() => inputStreams.close());

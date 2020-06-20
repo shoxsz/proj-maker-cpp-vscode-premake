@@ -17,11 +17,18 @@ class Project{
   }
 
   create(){
-    if(!fs.existsSync(this.workspaceLocation)){
-      fs.mkdirSync(this.workspaceLocation, { recursive: true });
-    }
-
+    this.createProjectFolder();
     this.creators.forEach(creator => creator(this));
+  }
+
+  createProjectFolder(){
+    if(!fs.existsSync(this.workspaceLocation)){
+      try{
+        fs.mkdirSync(this.workspaceLocation, { recursive: true });
+      }catch(error){
+        throw new Error("Invalid workspace location " + this.workspaceLocation);
+      }
+    }
   }
 
   createFolder(folder){
