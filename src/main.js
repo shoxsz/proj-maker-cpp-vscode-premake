@@ -13,5 +13,5 @@ const inputReader = input.InputReader(inputStreams);
 
 inputReader()
 .then(projData => project.createProject(projData))
-.catch(error => console.log("Project creation failed:", error.message))
+// .catch(error => console.log("Project creation failed:", error.message))
 .finally(() => inputStreams.close());
