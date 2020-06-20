@@ -1,6 +1,6 @@
 const path = require("path");
 
-const ProjectReader = require("./input/ProjectReader");
+const ProjectListReader = require("./input/ProjectListReader");
 const WorkspaceReader = require("./input/WorkspaceReader");
 const Reader = require("./input/Reader");
 
@@ -26,19 +26,19 @@ const InputReader = function(input){
     const defaults = getDefaults();
     
     const workspaceReader = new WorkspaceReader(input);
-    const projectReader = new ProjectReader(input);
+    const projectListReader = new ProjectListReader(input);
 
     workspaceReader.setDefault(defaults);
-    projectReader.setDefault(defaults);
+    projectListReader.setDefault(defaults);
 
     const reader = new Reader(input);
-    reader.setReaders([workspaceReader, projectReader]);
+    reader.setReaders([workspaceReader, projectListReader]);
 
     const configs = await reader.read();
 
     return {
       ...configs[0],
-      projects: configs.slice(1)
+      projects: configs[1]
     }
   }
 }

@@ -1,5 +1,3 @@
-const StringQuestion = require("./questions/StringQuestion");
-
 class Reader{
   constructor(inputStream){
     this.inputStream = inputStream;
@@ -22,21 +20,6 @@ class Reader{
     }
 
     return objs;
-  }
-
-  async shouldContinue(){
-    const continueAnswer = await this.questionContinue().toLowerCase();
-    return continueAnswer.startsWith("n");
-  }
-
-  async questionContinue(){
-    const question = new StringQuestion();
-
-    question.setInputStream(this.inputStream);
-    question.setDefaultResponse("no");
-    question.setQuestion("Add more projects");
-
-    return question.question();
   }
 }
 
