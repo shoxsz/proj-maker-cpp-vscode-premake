@@ -70,7 +70,7 @@ class ProjectReader{
 
     const sourceFiles = await question.question();
 
-    return sourceFiles.split(",");
+    return sourceFiles.split(",").map(src => src.trim());
   }
 }
 
